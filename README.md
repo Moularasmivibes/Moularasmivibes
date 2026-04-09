@@ -1,16 +1,29 @@
-## Hi there 👋
+Welcome to Moula Rasmi Vibes 
+The real-life journey of a Pakistani-Nepali couple sharing love, laughter, and everyday moments from life abroad.
+We bring you authentic desi lifestyle vibes, cultural fusion, food adventures, travel moments, and heartwarming stories that show how love goes beyond borders. 
+From simple daily routines to fun challenges, cooking experiments, family moments, and relatable couple content—everything here is raw, real, and full of joy.
+This is not just a page—it’s our life, our memories, and our story shared with you. 
 
-<!--
-**Moularasmivibes/Moularasmivibes** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+      What you’ll find here:-
 
-Here are some ideas to get you started:
+🍛 Desi food & cooking vibes
+🎥 Daily couple lifestyle vlogs
+😂 Fun & relatable moments
+💑 Love story across cultures
+🌏 Travel & adventure snippets
+🎉 Real-life laughter & emotions
+  We believe love has no boundaries, and happiness grows when shared. Join us on this beautiful journey and be part of our growing family. 
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+          📲 Let’s Connect:-
+
+▶️ YouTube:-
+https://www.youtube.com/@MoulaRasmiVibes
+🔳 TikTok:-
+tiktok.com/@moularasmivibes
+📸 Instagram:-
+ https://www.instagram.com/moulaharoon64
+📘 Facebook:-
+ https://facebook.com/Moularasmivibes
+
+📧 For Promotions & Collaborations:
+        Moularasmivibes@gmail.com
