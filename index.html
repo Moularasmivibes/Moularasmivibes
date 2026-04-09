@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Moula Rasmi Vibes</title>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',sans-serif}
+
+body{
+  background:linear-gradient(-45deg,#ff7eb3,#ff758c,#65d6ce,#4facfe,#c471f5);
+  background-size:400% 400%;
+  animation:gradientMove 10s ease infinite;
+  color:#fff;overflow-x:hidden
+}
+@keyframes gradientMove{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
+
+header{text-align:center;padding:80px 20px}
+header h1{
+  font-size:3rem;
+  background:linear-gradient(90deg,#fff,#ffd6f9);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  animation:glow 2s ease-in-out infinite alternate
+}
+@keyframes glow{from{text-shadow:0 0 10px rgba(255,255,255,.4)}to{text-shadow:0 0 30px rgba(255,255,255,1)}}
+header p{margin-top:10px;font-size:1.2rem;opacity:.9}
+
+.container{max-width:1100px;margin:auto;padding:20px}
+
+.card{
+  background:rgba(255,255,255,.08);
+  backdrop-filter:blur(18px);
+  border-radius:20px;
+  padding:30px;
+  margin:20px 0;
+  border:1px solid rgba(255,255,255,.2);
+  text-align:center;
+  transition:.4s
+}
+.card:hover{transform:translateY(-10px) scale(1.02);box-shadow:0 10px 30px rgba(0,0,0,.4)}
+
+.card h2{text-align:center;margin-bottom:15px}
+.card p{text-align:center;line-height:1.6}
+
+.features{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:15px;margin-top:20px}
+.feature{background:rgba(0,0,0,.25);padding:15px;border-radius:15px;transition:.3s}
+.feature:hover{transform:scale(1.08);background:rgba(0,0,0,.5)}
+
+/* SOCIAL BUTTONS (GLOW) */
+.socials{text-align:center;margin-top:20px}
+.socials a{
+  display:inline-block;
+  margin:10px;
+  padding:12px 22px;
+  border-radius:30px;
+  background:linear-gradient(90deg,#fff,#eee);
+  color:#333;
+  text-decoration:none;
+  font-weight:bold;
+  transition:.4s;
+  position:relative
+}
+.socials a::after{
+  content:"";
+  position:absolute;
+  inset:-2px;
+  border-radius:30px;
+  background:linear-gradient(90deg,#ff7eb3,#65d6ce);
+  z-index:-1;
+  filter:blur(8px);
+  opacity:0;
+  transition:.3s
+}
+.socials a:hover{transform:scale(1.15)}
+.socials a:hover::after{opacity:1}
+
+/* EMAIL */
+.email-box{display:flex;justify-content:center;align-items:center;margin-top:15px;gap:10px;flex-wrap:wrap}
+.email{
+  font-size:1.1rem;
+  font-weight:bold;
+  background:rgba(255,255,255,.25);
+  padding:12px 20px;
+  border-radius:30px;
+  box-shadow:0 5px 15px rgba(0,0,0,.3)
+}
+.copy-btn{
+  padding:10px 16px;
+  border:none;
+  border-radius:20px;
+  background:#fff;
+  color:#333;
+  font-weight:bold;
+  cursor:pointer;
+  transition:.3s
+}
+.copy-btn:hover{transform:scale(1.1)}
+
+footer{text-align:center;padding:20px;opacity:.8}
+
+@media(max-width:600px){header h1{font-size:2rem}}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>Moula Rasmi Vibes</h1>
+<p>Pakistani & Nepali Couple • Love Beyond Borders </p>
+</header>
+
+<div class="container">
+
+<div class="card">
+<p>
+The real-life journey of a Pakistani-Nepali couple sharing love, laughter, and everyday moments from life abroad. We bring you authentic desi lifestyle vibes, cultural fusion, food adventures, travel moments, and heartwarming stories that show how love goes beyond borders. From simple daily routines to fun challenges, cooking experiments, family moments, and relatable couple content everything here is raw, real, and full of joy. This is not just a page it’s our life, our memories, and our story shared with you.
+</p>
+</div>
+
+<div class="card">
+<h2>✨ What You Will Find On My Social Media :-</h2>
+<div class="features">
+<div class="feature">🎥 Daily Couple Vlogs,family drama</div>
+<div class="feature">🍛 Desi Food & Cooking</div>
+<div class="feature">😂 Fun challenges & couple moments</div>
+<div class="feature">💑 Our love story,unfiltered</div>
+<div class="feature">🌏 Lifestyle & Travel Adventures</div>
+<div class="feature">🎉 Real Emotions</div>
+</div>
+<p style="margin-top:20px;">We believe love has no boundaries, and happiness grows when shared. Join us on this beautiful journey and be part of our growing family.</p>
+</div>
+
+<div class="card">
+<h2>📲 Subscribe And Follow My Social Media Channel Link Blow Down :-</h2>
+<div class="socials">
+<a href="https://www.youtube.com/@MoulaRasmiVibes" target="_blank">▶️ YouTube</a>
+<a href="https://tiktok.com/@moularasmivibes" target="_blank">🔳 TikTok</a>
+<a href="https://www.instagram.com/moulaharoon64" target="_blank">📸 Instagram</a>
+<a href="https://facebook.com/Moularasmivibes" target="_blank">📘 Facebook</a>
+</div>
+</div>
+
+<div class="card">
+<h2>💌 For Promotions & Collaborations</h2>
+<div class="email-box">
+<span class="email" id="emailText">Moularasmivibes@gmail.com</span>
+<button class="copy-btn" onclick="copyEmail()">Copy</button>
+</div>
+</div>
+
+</div>
+
+<footer></footer>
+
+<script>
+function copyEmail(){
+  const text=document.getElementById("emailText").innerText;
+  navigator.clipboard.writeText(text);
+  alert("Email copied!");
+}
+</script>
+
+</body>
+</html>
