@@ -8,27 +8,68 @@
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',sans-serif}
 
+html{scroll-behavior:smooth}
+
 body{
   background:linear-gradient(-45deg,#ff7eb3,#ff758c,#65d6ce,#4facfe,#c471f5);
   background-size:400% 400%;
   animation:gradientMove 10s ease infinite;
-  color:#fff;overflow-x:hidden
+  color:#fff;
+  overflow-x:hidden;
 }
-@keyframes gradientMove{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
 
-header{text-align:center;padding:80px 20px}
-header h1{
+/* NAVBAR */
+nav{
+  position:fixed;
+  top:0;
+  width:100%;
+  background:rgba(0,0,0,.35);
+  backdrop-filter:blur(10px);
+  display:flex;
+  justify-content:center;
+  gap:25px;
+  padding:15px;
+  z-index:999;
+}
+
+nav a{
+  color:#fff;
+  text-decoration:none;
+  font-weight:bold;
+  transition:.3s;
+}
+nav a:hover{color:#ffd6f9;transform:scale(1.1)}
+
+@keyframes gradientMove{
+0%{background-position:0% 50%}
+50%{background-position:100% 50%}
+100%{background-position:0% 50%}
+}
+
+section{
+  padding:120px 20px 60px;
+  max-width:1100px;
+  margin:auto;
+}
+
+/* HERO */
+.hero{
+  text-align:center;
+}
+.hero h1{
   font-size:3rem;
   background:linear-gradient(90deg,#fff,#ffd6f9);
   -webkit-background-clip:text;
   -webkit-text-fill-color:transparent;
-  animation:glow 2s ease-in-out infinite alternate
+  animation:glow 2s ease-in-out infinite alternate;
 }
-@keyframes glow{from{text-shadow:0 0 10px rgba(255,255,255,.4)}to{text-shadow:0 0 30px rgba(255,255,255,1)}}
-header p{margin-top:10px;font-size:1.2rem;opacity:.9}
+@keyframes glow{
+from{text-shadow:0 0 10px rgba(255,255,255,.4)}
+to{text-shadow:0 0 30px rgba(255,255,255,1)}
+}
+.hero p{margin-top:10px;font-size:1.2rem;opacity:.9}
 
-.container{max-width:1100px;margin:auto;padding:20px}
-
+/* CARDS */
 .card{
   background:rgba(255,255,255,.08);
   backdrop-filter:blur(18px);
@@ -37,19 +78,26 @@ header p{margin-top:10px;font-size:1.2rem;opacity:.9}
   margin:20px 0;
   border:1px solid rgba(255,255,255,.2);
   text-align:center;
-  transition:.4s
+  transition:.4s;
 }
 .card:hover{transform:translateY(-10px) scale(1.02);box-shadow:0 10px 30px rgba(0,0,0,.4)}
 
-.card h2{text-align:center;margin-bottom:15px}
-.card p{text-align:center;line-height:1.6}
+.features{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:15px;
+  margin-top:20px;
+}
 
-.features{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:15px;margin-top:20px}
-.feature{background:rgba(0,0,0,.25);padding:15px;border-radius:15px;transition:.3s}
+.feature{
+  background:rgba(0,0,0,.25);
+  padding:15px;
+  border-radius:15px;
+  transition:.3s;
+}
 .feature:hover{transform:scale(1.08);background:rgba(0,0,0,.5)}
 
-/* SOCIAL BUTTONS (GLOW) */
-.socials{text-align:center;margin-top:20px}
+/* SOCIAL */
 .socials a{
   display:inline-block;
   margin:10px;
@@ -60,132 +108,114 @@ header p{margin-top:10px;font-size:1.2rem;opacity:.9}
   text-decoration:none;
   font-weight:bold;
   transition:.4s;
-  position:relative
-}
-.socials a::after{
-  content:"";
-  position:absolute;
-  inset:-2px;
-  border-radius:30px;
-  background:linear-gradient(90deg,#ff7eb3,#65d6ce);
-  z-index:-1;
-  filter:blur(8px);
-  opacity:0;
-  transition:.3s
+  position:relative;
 }
 .socials a:hover{transform:scale(1.15)}
-.socials a:hover::after{opacity:1}
 
 /* EMAIL */
-.email-box{display:flex;justify-content:center;align-items:center;margin-top:15px;gap:10px;flex-wrap:wrap}
 .email{
-  font-size:1.1rem;
-  font-weight:bold;
-  background:rgba(255,255,255,.25);
+  display:inline-block;
   padding:12px 20px;
+  background:rgba(255,255,255,.25);
   border-radius:30px;
-  box-shadow:0 5px 15px rgba(0,0,0,.3)
-}
-.copy-btn{
-  padding:10px 16px;
-  border:none;
-  border-radius:20px;
-  background:#fff;
-  color:#333;
   font-weight:bold;
-  cursor:pointer;
-  transition:.3s
 }
-.copy-btn:hover{transform:scale(1.1)}
 
-footer{text-align:center;padding:20px;opacity:.8}
+.btn{
+  display:inline-block;
+  margin-top:15px;
+  padding:10px 18px;
+  border-radius:8px;
+  background:linear-gradient(135deg,#C9A227,#8a6b12);
+  color:#000;
+  font-weight:bold;
+  text-decoration:none;
+}
 
-@media(max-width:600px){header h1{font-size:2rem}}
+/* FOOTER */
+footer{
+  text-align:center;
+  padding:30px;
+  opacity:.8;
+}
+
+@media(max-width:600px){
+.hero h1{font-size:2rem}
+}
 </style>
 </head>
 
 <body>
 
-<header>
-<h1>Moula Rasmi Vibes</h1>
-<p>Pakistani & Nepali Couple • Love Beyond Borders </p>
-</header>
+<!-- NAVIGATION -->
+<nav>
+  <a href="#home">Home</a>
+  <a href="#about">About Us</a>
+  <a href="#follow">Follow Us</a>
+  <a href="#contact">Contact Us</a>
+</nav>
 
-<div class="container">
+<!-- HOME -->
+<section id="home" class="hero">
+  <h1>Moula Rasmi Vibes</h1>
+  <p>Pakistani & Nepali Couple • Love Beyond Borders</p>
 
-<div class="card">
-<p>
-The real-life journey of a Pakistani-Nepali couple sharing love, laughter, and everyday moments from life abroad. We bring you authentic desi lifestyle vibes, cultural fusion, food adventures, travel moments, and heartwarming stories that show how love goes beyond borders. From simple daily routines to fun challenges, cooking experiments, family moments, and relatable couple content everything here is raw, real, and full of joy. This is not just a page it’s our life, our memories, and our story shared with you.
-</p>
-</div>
+  <div class="card">
+    <p>
+      The real-life journey of a Pakistani-Nepali couple sharing love, laughter, and everyday moments from life abroad.
+      We bring authentic desi lifestyle vibes, cultural fusion, food adventures, travel moments, and heartwarming stories.
+    </p>
+  </div>
+</section>
 
-<div class="card">
-<h2>✨ What You Will Find On My Social Media :-</h2>
-<div class="features">
-<div class="feature">🎥 Daily Couple Vlogs,family drama</div>
-<div class="feature">🍛 Desi Food & Cooking</div>
-<div class="feature">😂 Fun challenges & couple moments</div>
-<div class="feature">💑 Our love story,unfiltered</div>
-<div class="feature">🌏 Lifestyle & Travel Adventures</div>
-<div class="feature">🎉 Real Emotions</div>
-</div>
-<p style="margin-top:20px;">We believe love has no boundaries, and happiness grows when shared. Join us on this beautiful journey and be part of our growing family.</p>
-</div>
+<!-- ABOUT -->
+<section id="about">
+  <div class="card">
+    <h2>✨ What You Will Find</h2>
 
-<div class="card">
-<h2>📲 Subscribe And Follow My Social Media Channel Link Blow Down :-</h2>
-<div class="socials">
-<a href="https://www.youtube.com/@MoulaRasmiVibes" target="_blank">▶️ YouTube(Moula Rasmi Vibes)</a>
-<a href="https://tiktok.com/@moularasmivibes" target="_blank">🔳 TikTok(Moula Rasmi Vibes)</a>
-<a href="https://www.instagram.com/moulaharoon64" target="_blank">📸 Instagram(Moula Ditta)</a>
-<a href="https://facebook.com/Moularasmivibes" target="_blank">📘 Facebook(Moula Rasmi Vibes)</a>
-</div>
-</div>
+    <div class="features">
+      <div class="feature">🎥 Daily Couple Vlogs</div>
+      <div class="feature">🍛 Desi Food & Cooking</div>
+      <div class="feature">😂 Fun Challenges</div>
+      <div class="feature">💑 Love Story</div>
+      <div class="feature">🌏 Travel Adventures</div>
+      <div class="feature">🎉 Real Emotions</div>
+    </div>
 
-<div class="card">
-<h2>💌 For Promotions & Collaborations</h2>
-<div <!-- CTA Button -->
-      <div style="margin-top: 12px;">
-        <a href="mailto:Moularasmivibes@gmail.com?subject=%20Collaboration%20Inquiry"
-           style="
-             display: inline-block;
-             padding: 10px 16px;
-             background: linear-gradient(135deg, #C9A227, #8a6b12);
-             color: #0b0b0b;
-             text-decoration: none;
-             font-size: 12px;
-             font-weight: bold;
-             border-radius: 6px;
-             letter-spacing: 1px;
-           ">
-          BOOK Now Inquiry
-        </a>
-      </div>
-</div>
+    <p style="margin-top:20px;">
+      Love has no boundaries. Join our journey and be part of our family.
+    </p>
+  </div>
+</section>
 
-</div>
+<!-- FOLLOW -->
+<section id="follow">
+  <div class="card">
+    <h2>📲 Follow Us</h2>
 
-<footer></footer>
+    <div class="socials">
+      <a href="https://www.youtube.com/@MoulaRasmiVibes" target="_blank">YouTube (Moula Rasmi Vibes)</a>
+      <a href="https://tiktok.com/@moularasmivibes" target="_blank">TikTok (Moula Rasmi Vibes)</a>
+      <a href="https://www.instagram.com/moulaharoon64" target="_blank">Instagram (Moula Ditta)</a>
+      <a href="https://facebook.com/Moularasmivibes" target="_blank">Facebook (Moula Rasmi Vibes)</a>
+    </div>
+  </div>
+</section>
 
-<script>
-<!-- CTA Button -->
-      <div style="margin-top: 12px;">
-        <a href="mailto:Moularasmivibes@gmail.com?subject=%20Collaboration%20Inquiry"
-           style="
-             display: inline-block;
-             padding: 10px 16px;
-             background: linear-gradient(135deg, #C9A227, #8a6b12);
-             color: #0b0b0b;
-             text-decoration: none;
-             font-size: 12px;
-             font-weight: bold;
-             border-radius: 6px;
-             letter-spacing: 1px;
-           ">
-          BOOK 
-        </a>
-      </div>
-</script>
+<!-- CONTACT -->
+<section id="contact">
+  <div class="card">
+    <h2> For Promotions & Collaborations</h2>
+    <br>
+    <a class="btn" href="mailto:Moularasmivibes@gmail.com?subject=Collaboration%20Inquiry%20With Moula Rasmi Vibes">
+      BOOK COLLABORATION INQUIRY 
+    </a>
+  </div>
+</section>
+
+<footer>
+  © 2026 Moula Rasmi Vibes • All Rights Reserved
+</footer>
 
 </body>
 </html>
