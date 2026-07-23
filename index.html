@@ -754,16 +754,108 @@ moularasmivibes@gmail.com
 </div>
 
 <!-- CONTACT -->
-<section id="contact">
-  <div class="card">
-    <h2> For Promotions & Collaborations</h2>
-    <br>We are available for brand Deals,Sponsorship Opportunities, Product Promotions,and collaboration rojects.Contact us to discuss how we can work together and grow.
-    <a class="btn" href="mailto:Moularasmivibes@gmail.com?subject=Collaboration%20Inquiry%20With Moula Rasmi Vibes">
-      BOOK INQUIRY 
-    </a>
-  </div>
-</section>
+```html id="book-inquiry-page"
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Book Inquiry</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#667eea,#764ba2,#ff6b6b);
+    font-family:Arial,sans-serif;
+}
+
+.container{
+    text-align:center;
+    max-width:800px;
+    padding:40px;
+}
+
+h1{
+    color:white;
+    font-size:3rem;
+    margin-bottom:20px;
+}
+
+.info{
+    color:white;
+    font-size:1.2rem;
+    line-height:1.8;
+    margin-bottom:30px;
+}
+
+.btn{
+    padding:18px 40px;
+    font-size:20px;
+    font-weight:bold;
+    color:white;
+    border:none;
+    border-radius:50px;
+    cursor:pointer;
+    background:linear-gradient(90deg,#ff512f,#dd2476);
+    box-shadow:0 8px 20px rgba(0,0,0,0.25);
+    transition:all 0.3s ease;
+}
+
+.btn:hover{
+    transform:translateY(-3px) scale(1.05);
+    box-shadow:0 12px 25px rgba(0,0,0,0.35);
+}
+
+.email{
+    margin-top:20px;
+    color:white;
+    font-size:1rem;
+}
+
+.email a{
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+
+    <h1>📚 Book Inquiry</h1>
+
+    <div class="info">
+        We are available for <strong>Brand Deals</strong>,
+        <strong>Sponsorship Opportunities</strong>,
+        <strong>Product Promotions</strong>, and
+        <strong>Collaboration Projects</strong>.
+        Contact us to discuss how we can work together and grow.
+    </div>
+
+    <button class="btn"
+        onclick="window.location.href='mailto:moularasmivibes@gmail.com?subject=Book Inquiry'">
+       moularasmivibes@gmail.com
+    </button>
+
+    <div class="email">
+        Contact: <a href="mailto:moularasmivibes@gmail.com">moularasmivibes@gmail.com</a>
+    </div>
+
 </div>
+
+</body>
+</html>
+```
 
 </div>
 </section>
