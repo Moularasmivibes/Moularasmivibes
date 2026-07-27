@@ -1,792 +1,262 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Moula Rasmi Vibes | Digital Creator & Brand Collaborator</title>
-
-<meta name="description" content="Moula Rasmi Vibes - Pakistani-Nepali Couple Lifestyle Creators. Travel, Culture, Food, Family, Brand Collaborations, Sponsored Content, and Influencer Marketing.">
-<meta name="keywords" content="Moula Rasmi Vibes, Influencer, Digital Creator, Brand Collaborations, YouTube Creator, TikTok Creator, Instagram Influencer, Travel Content, Lifestyle Vlogs">
-<meta name="author" content="Moula Rasmi Vibes">
-
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
-
-<style>
-:root{
-    --gold:#d4af37;
-    --gold-light:#f7d97a;
-    --black:#0d0d0d;
-    --dark:#151515;
-    --card:#1c1c1c;
-    --white:#ffffff;
-    --gray:#bdbdbd;
-    --transition:.4s ease;
-}
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    scroll-behavior:smooth;
-}
-
-body{
-    font-family:'Segoe UI',sans-serif;
-    background:varH(--black);
-    color:var(--white);
-    line-height:1.7;
-}
-
-a{
-    text-decoration:none;
-}
-
-.container{
-    width:90%;
-    max-width:1300px;
-    margin:auto;
-}
-
-section{
-    padding:100px 0;
-}
-
-h1,h2,h3{
-    font-weight:700;
-}
-
-.gold{
-    color:var(--gold);
-}
-
-/* NAVBAR */
-
-nav{
-    position:fixed;
-    top:0;
-    width:100%;
-    z-index:999;
-    backdrop-filter:blur(12px);
-    background:rgba(0,0,0,.8);
-    border-bottom:1px solid rgba(212,175,55,.2);
-}
-
-.nav-container{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:18px 5%;
-}
-
-.logo{
-    font-size:1.5rem;
-    font-weight:800;
-    color:var(--gold);
-}
-
-.nav-links{
-    display:flex;
-    gap:25px;
-}
-
-.nav-links a{
-    color:white;
-    transition:var(--transition);
-}
-
-.nav-links a:hover{
-    color:var(--gold);
-}
-
-/* HERO */
-
-.hero{
-    min-height:100vh;
-    display:flex;
-    align-items:center;
-    background:
-    linear-gradient(rgba(0,0,0,.75),rgba(0,0,0,.85)),
-    url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1600&q=80');
-    background-size:cover;
-    background-position:center;
-}
-
-.hero-content{
-    max-width:850px;
-}
-
-.hero h1{
-    font-size:4rem;
-    margin-bottom:20px;
-}
-
-.hero p{
-    font-size:1.15rem;
-    color:#ddd;
-    margin-bottom:30px;
-}
-
-.btn{
-    display:inline-block;
-    padding:14px 30px;
-    border-radius:40px;
-    font-weight:600;
-    transition:var(--transition);
-}
-
-.btn-primary{
-    background:var(--gold);
-    color:black;
-}
-
-.btn-primary:hover{
-    transform:translateY(-3px);
-}
-
-.btn-outline{
-    border:1px solid var(--gold);
-    color:var(--gold);
-    margin-left:15px;
-}
-
-.btn-outline:hover{
-    background:var(--gold);
-    color:black;
-}
-
-/* SECTION TITLE */
-
-.section-title{
-    text-align:center;
-    margin-bottom:60px;
-}
-
-.section-title h2{
-    font-size:2.7rem;
-}
-
-.section-title p{
-    color:var(--gray);
-    margin-top:10px;
-}
-
-/* ABOUT */
-
-.about-grid{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:50px;
-}
-
-.card{
-    background:var(--card);
-    padding:30px;
-    border-radius:20px;
-    border:1px solid rgba(212,175,55,.15);
-    transition:var(--transition);
-}
-
-.card:hover{
-    transform:translateY(-6px);
-}
-
-/* FEATURES */
-
-.features{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:25px;
-}
-
-.feature-box{
-    text-align:center;
-    padding:35px;
-    background:var(--card);
-    border-radius:20px;
-}
-
-.feature-box i{
-    color:var(--gold);
-    font-size:2rem;
-    margin-bottom:15px;
-}
-
-/* SERVICES */
-
-.services-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-    gap:25px;
-}
-
-.service{
-    background:var(--card);
-    padding:30px;
-    border-radius:18px;
-    border-left:4px solid var(--gold);
-}
-
-/* STATS */
-
-.stats{
-    background:linear-gradient(135deg,#111,#1f1f1f);
-}
-
-.stats-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
-    gap:25px;
-}
-
-.stat{
-    text-align:center;
-}
-
-.stat h3{
-    color:var(--gold);
-    font-size:2.5rem;
-}
-
-/* PORTFOLIO */
-
-.portfolio-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-    gap:25px;
-}
-
-.portfolio-item{
-    overflow:hidden;
-    border-radius:20px;
-    position:relative;
-}
-
-.portfolio-item img{
-    width:100%;
-    height:260px;
-    object-fit:cover;
-    transition:.6s;
-}
-
-.portfolio-item:hover img{
-    transform:scale(1.1);
-}
-
-.overlay{
-    position:absolute;
-    inset:0;
-    background:linear-gradient(transparent,rgba(0,0,0,.85));
-    display:flex;
-    align-items:flex-end;
-    padding:20px;
-}
-
-/* YOUTUBE */
-
-.video-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
-    gap:25px;
-}
-
-.video-grid iframe{
-    width:100%;
-    height:250px;
-    border:none;
-    border-radius:18px;
-}
-
-/* BRANDS */
-
-.brand-box{
-    background:var(--card);
-    padding:40px;
-    border-radius:20px;
-    text-align:center;
-}
-
-/* SOCIAL */
-
-.socials{
-    display:flex;
-    justify-content:center;
-    flex-wrap:wrap;
-    gap:20px;
-}
-
-.socials a{
-    width:60px;
-    height:60px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    background:var(--card);
-    border-radius:50%;
-    color:var(--gold);
-    font-size:1.4rem;
-    transition:var(--transition);
-}
-
-.socials a:hover{
-    background:var(--gold);
-    color:black;
-}
-
-/* CONTACT */
-
-.contact-grid{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:40px;
-}
-
-form{
-    display:flex;
-    flex-direction:column;
-    gap:15px;
-}
-
-input,textarea{
-    padding:15px;
-    border:none;
-    border-radius:10px;
-    background:#222;
-    color:white;
-}
-
-textarea{
-    height:140px;
-}
-
-.whatsapp-btn{
-    background:#25D366;
-    color:white;
-    text-align:center;
-    padding:15px;
-    border-radius:10px;
-    font-weight:700;
-}
-
-/* FOOTER */
-
-footer{
-    background:#080808;
-    text-align:center;
-    padding:30px;
-    border-top:1px solid rgba(212,175,55,.2);
-}
-
-/* ANIMATION */
-
-.fade{
-    opacity:0;
-    transform:translateY(40px);
-    transition:.8s ease;
-}
-
-.fade.show{
-    opacity:1;
-    transform:translateY(0);
-}
-
-/* RESPONSIVE */
-
-@media(max-width:900px){
-
-.about-grid,
-.contact-grid{
-grid-template-columns:1fr;
-}
-
-.hero h1{
-font-size:2.8rem;
-}
-
-.nav-links{
-display:none;
-}
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moula Rasmi Vibes | Digital Creator & Brand Collaborator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #0A0A0A;
+            color: #ffffff;
+            scroll-behavior: smooth;
+        }
+        .serif { font-family: 'Playfair Display', serif; }
+        .gold-text { color: #D4AF37; }
+        .gold-bg { background-color: #D4AF37; }
+        .purple-gradient {
+            background: linear-gradient(135deg, #0A0A0A 0%, #2D0B3D 50%, #0A0A0A 100%);
+        }
+        .btn-gold {
+            background: linear-gradient(45deg, #D4AF37, #F9E29C);
+            color: #000;
+            transition: all 0.3s ease;
+        }
+        .btn-gold:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(212, 175, 55, 0.3);
+        }
+        .card-glass {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(212, 175, 55, 0.1);
+        }
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 100;
+        }
+    </style>
 </head>
-
 <body>
 
-<nav>
-<div class="nav-container">
-<div class="logo">Moula Rasmi Vibes</div>
-
-<div class="nav-links">
-<a href="#home">Home</a>
-<a href="#about">About</a>
-<a href="#services">Services</a>
-<a href="#portfolio">Portfolio</a>
-<a href="#brands">Brands</a>
-<a href="#contact">Contact</a>
-</div>
-</div>
-</nav>
-
-<!-- HERO -->
-
-<section class="hero" id="home">
-<div class="container">
-<div class="hero-content">
-
-<h1>Welcome to <span class="gold">Moula Rasmi Vibes</span></h1>
-
-<p>
-The real-life journey of a Pakistani-Nepali couple sharing love, laughter,
-culture, food, travel adventures, and authentic moments from life abroad.
-We create meaningful content that inspires audiences and delivers value
-for brands seeking genuine engagement.
-</p>
-
-<a href="#contact" class="btn btn-primary">Work With Us</a>
-<a href="#portfolio" class="btn btn-outline">View Portfolio</a>
-
-</div>
-</div>
-</section>
-
-<!-- ABOUT -->
-
-<section id="about">
-<div class="container">
-
-<div class="section-title">
-<h2>Our Story</h2>
-<p>Authentic storytelling. Real emotions. Meaningful connections.</p>
-</div>
-
-<div class="about-grid">
-
-<div class="card fade">
-<h3 class="gold">Who We Are</h3>
-<p>
-Moula Rasmi Vibes is more than a content platform—it's a celebration of
-culture, family, travel, food, and authentic storytelling.
-Our journey showcases how love goes beyond borders through everyday moments,
-fun challenges, lifestyle experiences, and heartwarming memories.
-</p>
-</div>
-
-<div class="card fade">
-<h3 class="gold">What You'll Find Here</h3>
-
-<ul>
-<li>Desi Food & Cooking Vibes</li>
-<li>Daily Couple Lifestyle Vlogs</li>
-<li>Fun & Relatable Moments</li>
-<li>A Love Story Across Cultures</li>
-<li>Travel & Adventure Snippets</li>
-<li>Real-Life Laughter & Emotions</li>
-</ul>
-
-</div>
-
-</div>
-
-</div>
-</section>
-
-<!-- FEATURES -->
-
-<section>
-<div class="container">
-
-<div class="features">
-
-<div class="feature-box fade">
-<i class="fas fa-heart"></i>
-<h3>Authentic Stories</h3>
-<p>Real-life content that audiences genuinely connect with.</p>
-</div>
-
-<div class="feature-box fade">
-<i class="fas fa-globe"></i>
-<h3>Cross-Cultural Reach</h3>
-<p>Pakistani-Nepali lifestyle and international audience appeal.</p>
-</div>
-
-<div class="feature-box fade">
-<i class="fas fa-camera"></i>
-<h3>Premium Content</h3>
-<p>Professional videos, reels, shorts, and branded campaigns.</p>
-</div>
-
-<div class="feature-box fade">
-<i class="fas fa-handshake"></i>
-<h3>Trusted Partnerships</h3>
-<p>Reliable collaboration with brands and agencies.</p>
-</div>
-
-</div>
-
-</div>
-</section>
-
-<!-- SERVICES -->
-
-<section id="services">
-<div class="container">
-
-<div class="section-title">
-<h2>Services</h2>
-</div>
-
-<div class="services-grid">
-
-<div class="service">Brand Collaborations</div>
-<div class="service">Sponsored Content</div>
-<div class="service">Product Promotions</div>
-<div class="service">YouTube Promotions</div>
-<div class="service">TikTok Promotions</div>
-<div class="service">Instagram Reels & Stories</div>
-<div class="service">Facebook Promotions</div>
-<div class="service">Travel & Lifestyle Campaigns</div>
-<div class="service">Event Coverage</div>
-<div class="service">Influencer Marketing Campaigns</div>
-<div class="service">Custom Brand Partnerships</div>
-<div class="service">Social Media Marketing Campaigns</div>
-
-</div>
-
-</div>
-</section>
-
-<!-- STATS -->
-
-<section class="stats">
-<div class="container">
-
-<div class="section-title">
-<h2>Performance Statistics</h2>
-<p>Editable section for media kit metrics.</p>
-</div>
-
-<div class="stats-grid">
-
-<div class="stat">
-<h3>250K+</h3>
-<p>Total Followers</p>
-</div>
-
-<div class="stat">
-<h3>2M+</h3>
-<p>Monthly Reach</p>
-</div>
-
-<div class="stat">
-<h3>50M+</h3>
-<p>Total Views</p>
-</div>
-
-<div class="stat">
-<h3>8.5%</h3>
-<p>Engagement Rate</p>
-</div>
-
-<div class="stat">
-<h3>100+</h3>
-<p>Brand Collaborations</p>
-</div>
-
-</div>
-
-</div>
-</section>
-
-<!-- PORTFOLIO -->
-
-<section id="portfolio">
-<div class="container">
-
-<div class="section-title">
-<h2>Portfolio Showcase</h2>
-<p>Travel • Lifestyle • Culture • Food • Couple Content</p>
-</div>
-
-<div class="portfolio-grid">
-
-<div class="portfolio-item">
-<img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac" alt="">
-<div class="overlay"><h3>Daily Couple Vlogs</h3></div>
-</div>
-
-<div class="portfolio-item">
-<img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb" alt="">
-<div class="overlay"><h3>Travel Adventures</h3></div>
-</div>
-
-<div class="portfolio-item">
-<img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836" alt="">
-<div class="overlay"><h3>Food & Cooking Vibes</h3></div>
-</div>
-
-<div class="portfolio-item">
-<img src="https://images.unsplash.com/photo-1517457373958-b7bdd4587205" alt="">
-<div class="overlay"><h3>Cultural Fusion</h3></div>
-</div>
-
-<div class="portfolio-item">
-<img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330" alt="">
-<div class="overlay"><h3>Brand Campaigns</h3></div>
-</div>
-
-<div class="portfolio-item">
-<img src="https://images.unsplash.com/photo-1527631746610-bca00a040d60" alt="">
-<div class="overlay"><h3>Love Beyond Borders</h3></div>
-</div>
-
-</div>
-
-</div>
-</section>
-
-<!-- YOUTUBE -->
-
-<section>
-<div class="container">
-
-<div class="section-title">
-
-
-<!-- BRANDS -->
-
-<section id="brands">
-<div class="container">
-
-<div class="brand-box">
-
-<h2 class="gold">Why Brands Work With Us</h2>
-
-<br>
-
-<p>
-✓ Authentic and engaging storytelling<br>
-✓ Multi-platform promotional campaigns<br>
-✓ High-quality lifestyle and travel content<br>
-✓ Professional communication and execution<br>
-✓ Customized campaigns aligned with business goals<br>
-✓ Genuine audience engagement and trust<br>
-✓ Long-term partnership opportunities
-</p>
-
-<br>
-
-<p>
-We are always excited to collaborate with brands that value creativity,
-authenticity, and meaningful storytelling. Whether launching a product,
-promoting a service, or building awareness, we create content that naturally
-connects with audiences and delivers measurable impact.
-</p>
-
-</div>
-
-</div>
-</section>
-
-<!-- SOCIAL -->
-
-<section>
-<div class="container">
-
-<div class="section-title">
-<h2>Follow Our Journey</h2>
-</div>
-
-<div class="socials">
-
-<a href="https://www.youtube.com/@MoulaRasmiVibes" target="_blank">
-<i class="fab fa-youtube"></i>
-</a>
-
-<a href="https://www.tiktok.com/@moularasmivibes" target="_blank">
-<i class="fab fa-tiktok"></i>
-</a>
-
-<a href="https://www.instagram.com/moulaharoon64" target="_blank">
-<i class="fab fa-instagram"></i>
-</a>
-
-<a href="https://www.facebook.com/Moularasmivibes" target="_blank">
-<i class="fab fa-facebook-f"></i>
-</a>
-
-</div>
-
-</div>
-</section>
-
-<!-- CONTACT -->
-
-<section id="contact">
-<div class="container">
-
-<div class="section-title">
-<h2>Brand Partnerships & Business Inquiries</h2>
-</div>
-
-<div class="contact-grid">
-
-<div>
-<h3 class="gold">Let's Collaborate</h3>
-
-<p>
-We welcome collaboration opportunities with tourism companies,
-hotels, restaurants, fashion brands, technology companies,
-family-oriented businesses, startups, and global organizations.
-</p>
-
-<br>
-
-<p>
-<strong>Email:</strong><br>
-moularasmivibes@gmail.com
-</p>
-
-<br>
-
-<a href="https://wa.me/92345" class="whatsapp-btn" target="_blank">
-<i class="fab fa-whatsapp"></i> Contact on WhatsApp
-</a>
-
-</div>
-
-<!-- CONTACT -->
-<section id="contact">
-  <div class="card">
-    <h2> For Promotions & Collaborations</h2>
-    <br>We are available for brand Deals,Sponsorship Opportunities, Product Promotions,and collaboration rojects.Contact us to discuss how we can work together and grow.
-    <a class="btn" href="mailto:Moularasmivibes@gmail.com?subject=Collaboration%20Inquiry%20With Moula Rasmi Vibes">
-      moularasmivibes@gmail.com
-    </a>
-  </div>
-</section>
-</div>
-
-</div>
-</section>
-
-<footer>
-<p>
-© 2026 Moula Rasmi Vibes | Digital Creator • Influencer • Brand Collaborator
-</p>
-</footer>
-
-<script>
-const observer = new IntersectionObserver(entries=>{
-entries.forEach(entry=>{
-if(entry.isIntersecting){
-entry.target.classList.add("show");
-}
-});
-});
-
-document.querySelectorAll(".fade").forEach(el=>{
-observer.observe(el);
-});
-</script>
-
+    <!-- WhatsApp Floating Button -->
+    <div class="whatsapp-float">
+        <a href="https://wa.me/YOUR_PHONE_NUMBER" target="_blank" class="bg-green-500 w-16 h-16 rounded-full flex items-center justify-center text-3xl shadow-lg hover:scale-110 transition-transform">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 px-6 py-4 flex justify-between items-center bg-black/80 backdrop-blur-md border-b border-gold-500/10">
+        <div class="text-2xl font-bold serif gold-text">MOULA RASMI VIBES</div>
+        <div class="hidden md:flex space-x-8 text-sm uppercase tracking-widest">
+            <a href="#home" class="hover:text-[#D4AF37] transition">Home</a>
+            <a href="#about" class="hover:text-[#D4AF37] transition">Our Story</a>
+            <a href="#services" class="hover:text-[#D4AF37] transition">Services</a>
+            <a href="#portfolio" class="hover:text-[#D4AF37] transition">Portfolio</a>
+            <a href="#brands" class="hover:text-[#D4AF37] transition">Brands</a>
+        </div>
+        <a href="mailto:moularasmivibes@gmail.com" class="btn-gold px-6 py-2 rounded-full font-bold text-xs uppercase tracking-tighter">Contact Us</a>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="h-screen flex items-center justify-center text-center purple-gradient px-4">
+        <div data-aos="fade-up">
+            <h1 class="text-5xl md:text-7xl serif mb-6">Welcome to <span class="gold-text">Moula Rasmi Vibes</span></h1>
+            <p class="max-w-3xl mx-auto text-lg md:text-xl text-gray-300 leading-relaxed mb-8">
+                The real-life journey of a Pakistani-Nepali couple sharing love, laughter, and everyday moments from life abroad. Love goes beyond borders.
+            </p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="#portfolio" class="btn-gold px-8 py-4 rounded-md font-bold uppercase">View Portfolio</a>
+                <a href="#brands" class="border border-[#D4AF37] text-[#D4AF37] px-8 py-4 rounded-md font-bold uppercase hover:bg-[#D4AF37] hover:text-black transition">Brand Partnerships</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Statistics Section -->
+    <section class="py-20 bg-black border-y border-white/5">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-2 md:grid-cols-5 gap-8 text-center">
+                <div data-aos="zoom-in">
+                    <div class="text-4xl font-bold gold-text mb-2">500K+</div>
+                    <p class="text-xs uppercase tracking-widest text-gray-400">Total Followers</p>
+                </div>
+                <div data-aos="zoom-in" data-aos-delay="100">
+                    <div class="text-4xl font-bold gold-text mb-2">2M+</div>
+                    <p class="text-xs uppercase tracking-widest text-gray-400">Monthly Reach</p>
+                </div>
+                <div data-aos="zoom-in" data-aos-delay="200">
+                    <div class="text-4xl font-bold gold-text mb-2">10M+</div>
+                    <p class="text-xs uppercase tracking-widest text-gray-400">Total Views</p>
+                </div>
+                <div data-aos="zoom-in" data-aos-delay="300">
+                    <div class="text-4xl font-bold gold-text mb-2">High</div>
+                    <p class="text-xs uppercase tracking-widest text-gray-400">Engagement Rate</p>
+                </div>
+                <div data-aos="zoom-in" data-aos-delay="400">
+                    <div class="text-4xl font-bold gold-text mb-2">50+</div>
+                    <p class="text-xs uppercase tracking-widest text-gray-400">Collaborations</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 container mx-auto px-6">
+        <div class="grid md:grid-cols-2 gap-16 items-center">
+            <div data-aos="fade-right">
+                <img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&q=80" alt="Moula Rasmi Vibes" class="rounded-2xl shadow-2xl border border-gold-500/20">
+            </div>
+            <div data-aos="fade-left">
+                <h2 class="text-4xl serif mb-6 gold-text">Our Life, Our Memories, Our Story</h2>
+                <p class="text-gray-300 leading-relaxed mb-6">
+                    Moula Rasmi Vibes is more than a content platform—it's a celebration of culture, family, travel, and authentic storytelling. We bring you authentic desi lifestyle vibes, cultural fusion, food adventures, and heartwarming stories.
+                </p>
+                <p class="text-gray-300 leading-relaxed">
+                    From simple daily routines to fun challenges, cooking experiments, and relatable couple content—everything here is raw, real, and full of joy. We believe love has no boundaries, and happiness grows when shared.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- What You'll Find Section -->
+    <section class="py-24 bg-[#0F0F0F]">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl serif text-center mb-16 gold-text">What You'll Find Here</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="card-glass p-8 rounded-xl text-center hover:border-purple-500 transition" data-aos="fade-up">
+                    <i class="fas fa-video text-3xl mb-4 gold-text"></i>
+                    <h3 class="text-xl font-bold mb-2">Daily Lifestyle Vlogs</h3>
+                    <p class="text-gray-400 text-sm">Authentic everyday moments and desi vibes.</p>
+                </div>
+                <div class="card-glass p-8 rounded-xl text-center hover:border-purple-500 transition" data-aos="fade-up" data-aos-delay="100">
+                    <i class="fas fa-utensils text-3xl mb-4 gold-text"></i>
+                    <h3 class="text-xl font-bold mb-2">Desi Food & Cooking</h3>
+                    <p class="text-gray-400 text-sm">Traditional recipes and cooking experiments.</p>
+                </div>
+                <div class="card-glass p-8 rounded-xl text-center hover:border-purple-500 transition" data-aos="fade-up" data-aos-delay="200">
+                    <i class="fas fa-heart text-3xl mb-4 gold-text"></i>
+                    <h3 class="text-xl font-bold mb-2">A Love Story Across Cultures</h3>
+                    <p class="text-gray-400 text-sm">Celebrating Pakistani-Nepali cultural fusion.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- YouTube Featured Section -->
+    <section class="py-24 container mx-auto px-6">
+        <h2 class="text-3xl serif text-center mb-16 gold-text">Latest From YouTube</h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Video 1 -->
+            <div class="aspect-video bg-gray-900 rounded-lg overflow-hidden border border-white/10" data-aos="zoom-in">
+                <iframe class="w-full h-full" src="https://www.youtube.com/embed?listType=user_uploads&list=MoulaRasmiVibes" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <!-- Video 2 -->
+            <div class="aspect-video bg-gray-900 rounded-lg overflow-hidden border border-white/10" data-aos="zoom-in" data-aos-delay="100">
+                <iframe class="w-full h-full" src="https://www.youtube.com/embed?v=VIDEO_ID_HERE" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <!-- Video 3 -->
+            <div class="aspect-video bg-gray-900 rounded-lg overflow-hidden border border-white/10" data-aos="zoom-in" data-aos-delay="200">
+                <iframe class="w-full h-full" src="https://www.youtube.com/embed?v=VIDEO_ID_HERE" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="py-24 purple-gradient">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl serif text-center mb-16 gold-text">Professional Services</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                <div class="p-6 border border-gold-500/20 bg-black/40 rounded-lg">Brand Collaborations</div>
+                <div class="p-6 border border-gold-500/20 bg-black/40 rounded-lg">Sponsored Content</div>
+                <div class="p-6 border border-gold-500/20 bg-black/40 rounded-lg">Product Promotions</div>
+                <div class="p-6 border border-gold-500/20 bg-black/40 rounded-lg">Social Media Marketing</div>
+                <div class="p-6 border border-gold-500/20 bg-black/40 rounded-lg">YouTube Promotions</div>
+                <div class="p-6 border border-gold-500/20 bg-black/40 rounded-lg">TikTok Promotions</div>
+                <div class="p-6 border border-gold-500/20 bg-black/40 rounded-lg">Instagram Reels & Stories</div>
+                <div class="p-6 border border-gold-500/20 bg-black/40 rounded-lg">Facebook Promotions</div>
+                <div class="p-6 border border-gold-500/20 bg-black/40 rounded-lg">Travel & Lifestyle Content</div>
+                <div class="p-6 border border-gold-500/20 bg-black/40 rounded-lg">Event Coverage</div>
+                <div class="p-6 border border-gold-500/20 bg-black/40 rounded-lg">Influencer Marketing</div>
+                <div class="p-6 border border-gold-500/20 bg-black/40 rounded-lg">Custom Brand Partnerships</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Work With Us Section -->
+    <section id="brands" class="py-24 container mx-auto px-6">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl serif text-center mb-12 gold-text">Why Brands Should Work With Us</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <ul class="space-y-4">
+                    <li class="flex items-center space-x-3"><i class="fas fa-check-circle gold-text"></i> <span>Authentic and engaging storytelling</span></li>
+                    <li class="flex items-center space-x-3"><i class="fas fa-check-circle gold-text"></i> <span>Cross-cultural audience appeal</span></li>
+                    <li class="flex items-center space-x-3"><i class="fas fa-check-circle gold-text"></i> <span>Professional content production</span></li>
+                    <li class="flex items-center space-x-3"><i class="fas fa-check-circle gold-text"></i> <span>Multi-platform brand promotions</span></li>
+                </ul>
+                <ul class="space-y-4">
+                    <li class="flex items-center space-x-3"><i class="fas fa-check-circle gold-text"></i> <span>High-quality lifestyle & travel content</span></li>
+                    <li class="flex items-center space-x-3"><i class="fas fa-check-circle gold-text"></i> <span>Reliable and professional communication</span></li>
+                    <li class="flex items-center space-x-3"><i class="fas fa-check-circle gold-text"></i> <span>Customized brand campaigns</span></li>
+                    <li class="flex items-center space-x-3"><i class="fas fa-check-circle gold-text"></i> <span>Genuine audience trust</span></li>
+                </ul>
+            </div>
+            
+            <div class="mt-16 p-10 bg-black border border-gold-500/30 rounded-3xl text-center" data-aos="zoom-in">
+                <h3 class="text-2xl font-bold mb-4">Let's Create Compelling Stories</h3>
+                <p class="text-gray-400 mb-8">We welcome collaborations with tourism companies, hotels, restaurants, lifestyle brands, fashion labels, and global startups seeking impactful digital marketing solutions.</p>
+                <a href="mailto:moularasmivibes@gmail.com" class="btn-gold px-12 py-4 rounded-full font-bold inline-block uppercase">Send Business Inquiry</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Media Links -->
+    <section class="py-12 bg-[#050505]">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-xl uppercase tracking-widest mb-10 text-gray-500">Connect With Our Platforms</h2>
+            <div class="flex flex-wrap justify-center gap-6 md:gap-12">
+                <a href="https://www.youtube.com/@MoulaRasmiVibes" target="_blank" class="flex flex-col items-center hover:scale-110 transition">
+                    <i class="fab fa-youtube text-4xl mb-2 text-red-600"></i>
+                    <span class="text-xs">YouTube</span>
+                </a>
+                <a href="https://www.tiktok.com/@moularasmivibes" target="_blank" class="flex flex-col items-center hover:scale-110 transition">
+                    <i class="fab fa-tiktok text-4xl mb-2"></i>
+                    <span class="text-xs">TikTok</span>
+                </a>
+                <a href="https://www.instagram.com/moulaharoon64" target="_blank" class="flex flex-col items-center hover:scale-110 transition">
+                    <i class="fab fa-instagram text-4xl mb-2 text-pink-600"></i>
+                    <span class="text-xs">Instagram</span>
+                </a>
+                <a href="https://www.facebook.com/Moularasmivibes" target="_blank" class="flex flex-col items-center hover:scale-110 transition">
+                    <i class="fab fa-facebook text-4xl mb-2 text-blue-600"></i>
+                    <span class="text-xs">Facebook</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 border-t border-white/5 bg-black text-center">
+        <p class="serif text-xl gold-text mb-4">MOULA RASMI VIBES</p>
+        <p class="text-gray-500 text-sm">&copy; 2024 Moula Rasmi Vibes. All Rights Reserved.</p>
+        <div class="mt-4">
+            <a href="mailto:moularasmivibes@gmail.com" class="text-xs text-gray-400 hover:text-white transition">moularasmivibes@gmail.com</a>
+        </div>
+    </footer>
+
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+    </script>
 </body>
 </html>
